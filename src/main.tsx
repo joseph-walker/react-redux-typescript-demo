@@ -1,13 +1,14 @@
 import * as React from "react";
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { Store, createStore } from 'redux';
+import { Store, createStore, applyMiddleware } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
 import App from './containers/App';
 import reducer from './data/reducer';
-import { Model, initialState } from './data/model';
+import Model from './data/model';
 
-const store: Store<Model> = createStore(reducer, initialState);
+const store: Store<Model> = createStore(reducer, composeWithDevTools());
 
 const app = (
     <Provider store={store}>

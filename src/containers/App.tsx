@@ -6,7 +6,7 @@ import CountDisplay from './../components/CountDisplay';
 import IncrementButton from './../components/IncrementButton';
 import IncrementByButton from './../components/IncrementByButton';
 import actionCreators from './../data/actionCreators';
-import { Model } from './../data/model';
+import Model from './../data/model';
 
 // Props that can be passed directly to the App component
 interface AppProps {

@@ -1,7 +1,11 @@
 import { Action, ActionType } from './actions';
-import { Model } from './model';
+import Model from './model';
 
-export default function reducer(state: Model, action: Action): Model {
+const initialState: Model = {
+    count: 0
+};
+
+export default function reducer(state: Model = initialState, action: Action): Model {
     switch (action.type) {
         case ActionType.Increment: {
             return {

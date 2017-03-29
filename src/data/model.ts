@@ -1,7 +1,5 @@
-export interface Model {
+interface Model {
     count: number
 }
 
-export const initialState: Model = {
-    count: 0
-};
+export default Model;
